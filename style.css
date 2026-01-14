@@ -1,0 +1,177 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: #f2f2f2;
+
+}
+.container {
+width: 80%;
+padding: 30px;
+margin: 30px auto;
+box-shadow: 0px 2px 5px rgba(0,0, 0, 0.4);
+
+
+}
+
+.container h1 {
+    font-size: 36px;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #fff;
+    background-color: #007bff;
+
+}
+form {
+    padding: 20px 0 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+form label i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #73b1f4;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form select:focus {
+    outline: none;
+    background-color: #fff;
+}
+
+form button {
+    display: block;
+    margin:20px auto ;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+
+}
+form button i {
+    margin-right: 6px;
+}
+form button:hover {
+    background-color: #0062cc;
+}
+#show-values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+
+}
+#show-values > div {
+    flex-basis: calc(33.33% - 1rem);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+}
+#show-values h2 {
+    margin-top: 0;
+    margin-bottom: 1rem ;
+}
+#show-values button.btn {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    width: 100%;
+    font-weight: bold;
+
+}
+#show-values button.btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+#show-values button.btn i {
+    margin-right: 5px;
+
+}
+#show-values i {
+    margin-right: 3px;
+}
+
+#show-values h2 {
+ font-size: 24px;
+ margin-top: 20px;
+ margin-bottom: 10px;
+ text-decoration: underline;
+ color: #6d4c41;
+}
+
+#show-values ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+
+}
+#show-values ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom:10px ;
+    border-radius: 3px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#expense-list li {
+    background-color: #ff6961;
+    color: #fff;
+}
+
+#income-list li {
+    background-color: #77dd77;
+    color: #fff;
+}
+
+ .box-calculate #total {
+    align-content: center;
+ background-color: #dff0d8;
+ display: block;
+ padding: 8%;
+ border-radius: 5px;
+ color: #333;
+ border : 1px solid #3c763d ;
+ margin-top: 10px;
+  
+ 
+}
