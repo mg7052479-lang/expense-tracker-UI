@@ -1,7 +1,11 @@
 # Expense Tracker UI
 
 A simple expense tracker user interface built using HTML and CSS.
-This project focuses on clean layout, form styling, and usability.
+This project focuses on clean layout and form design.
+Users can enter expense details like amount and category.
+The UI is responsive and easy to use.
+JavaScript functionality will be added in future updates.
+
 
 ## Features
 - Expense input form
