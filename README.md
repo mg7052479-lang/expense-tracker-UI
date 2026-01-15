@@ -1,26 +1,29 @@
-# Expense Tracker UI
+# 💰 Expense & Income Tracker
 
-A simple expense tracker user interface built using HTML and CSS.
-This project focuses on clean layout and form design.
-Users can enter expense details like amount and category.
-The UI is responsive and easy to use.
-JavaScript functionality will be added in future updates.
+A simple and responsive **Expense & Income Tracker** built using **HTML, CSS, and Vanilla JavaScript**.  
+This project helps users track their daily expenses and incomes, calculate the net balance, and store data using browser localStorage.
 
+---
 
-## Features
-- Expense input form
-- Amount and category fields
-- Clean and minimal UI
-- Responsive layout
+## ✨ Features
 
-## Tech Stack
-- HTML
-- CSS
+- ➕ Add expenses and incomes with description and amount  
+- 📋 Separate lists for expenses and incomes  
+- 🧮 Automatic calculation of total net balance  
+- 🗑️ Clear all expenses or incomes with one click  
+- 💾 Data persistence using `localStorage`  
+- 📱 Responsive layout using Flexbox  
 
-## Status
-UI completed. JavaScript functionality will be added later.
+---
 
-## Future Improvements
-- Add expense logic using JavaScript
-- Store data using localStorage
-- Show total expenses and summary
+## 🛠️ Technologies Used
+
+- **HTML5** – Structure  
+- **CSS3** – Styling & responsive layout  
+- **JavaScript (ES6)** – Logic & interactivity  
+- **Font Awesome** – Icons  
+
+---
+
+## 📂 Project Structure
+
