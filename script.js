@@ -1,43 +1,103 @@
+/// Declearing the Matrials // 
 
-//   /// Declearing the list  ///
+const Discription = document.getElementById("Discription")
+const amount = document.getElementById("amount")
+const addbtn = document.getElementById("addbtn")
+const type = document.getElementById("type")
+const expenseList = document.getElementById("expense-list")
+const incomeList = document.getElementById("income-list")
+const expenseClear = document.getElementById("btn-clear")
+const incomeClear = document.getElementById("btn-clear-income")
+const total = document.getElementById("total")
 
-   const expenseList = document.getElementById("expense-list")
-   const incomeList = document.getElementById("income-list")
-   const total = document.getElementById("total")
-   const expenseForm = document.getElementById("expense-form")
-   const expenseDescription = document.getElementById("Discription")
-   const expenseAmount = document.getElementById("amount")
-   const type = document.getElementById("type")
-   const addBtn = document.getElementById("addbtn")
+// storing data // 
+ let expenses = [];
+ let incomes = [];
+ let totalExpense = 0;
+ let totalIncome = 0 ;
 
-  /// Initiling the arrays and variable in expense and income .. 
+ // add event to add button //
 
-  let expenses = [];
-  let income = [];
-  let totalExpense = 0;
-  let totalIncome = 0;
-
- // Add event listner to the add button  .. 
-
- addBtn.addEventListener("click", function () {
-     // Create an object to represent the expnese and the amount ... 
-   let dataValues = {                                      
-                      Discription:expenseDescription.nodeValue,     // Must be a douts 2// 
-                      Amount:expenseAmount.value, 
-                      type:type.value
-   };
-     // if the expenses has the dispriction and amount , add it to the appropriate array ..   
-   if (dataValues.Discription && dataValues.Amount){
-      if (dataValues.type === "expense"){
-         expenses.push(dataValues);
-         totalExpense +=dataValues.Amount ;
-      }
-      else {
-         income.push(dataValues);
-         totalIncome += dataValues.Amount
-      }
+ addbtn.addEventListener("click", function(){
+   let dataValues = {
+      Discription:Discription.value,
+      amount:Number(amount.value),
+      type:type.value
+   }
+    
+   if(!dataValues.Discription || !dataValues.amount) return ;
+   
+   if (dataValues.type === "expense"){
+      expenses.push(dataValues);
+      totalExpense += dataValues.amount ;
+   }
+   else {
+      incomes.push(dataValues);
+      totalIncome += dataValues.amount ;
    }
 
+updateList ();
+updateTotal();
+clearHide();
+
+   Discription.value = "";
+   amount.value = ""; 
  })
 
- // create a Function to a
+
+ function updateList () {
+    expenseList.innerHTML = "";
+    incomeList.innerHTML = "";
+
+   expenses.forEach(function (expense) {
+      let li = document.createElement("li");
+      li.innerHTML = `${expense.Discription} = $${expense.amount}`
+      expenseList.appendChild(li);
+   });
+
+   incomes.forEach(function (income) {
+      let li = document.createElement("li");
+      li.innerHTML = `${income.Discription} = $${income.amount}`
+      incomeList.appendChild(li);
+   });
+ }
+
+/// To Update the Total /// 
+ function updateTotal(){
+   const netIncome = totalIncome - totalExpense ;
+   total.textContent = netIncome ;
+ }
+
+// Hide the clear Button // 
+
+function clearHide() {
+   expenseClear.style.display = expenses.length > 0 ? "inline-block" : "none" ;
+   incomeClear.style.display = incomes.length > 0 ? "inline-block" : "none" ;
+}
+console.log(expenseClear , incomeClear);
+
+
+// add event to clear btn //
+
+if (expenseClear) {
+   expenseClear.addEventListener("click", function (){
+      expenses = [];
+      totalExpense = 0 ;
+      updateList ();
+      updateTotal();
+      clearHide();
+   })
+}
+
+if (incomeClear) {
+   incomeClear.addEventListener("click", function (){
+      incomes = [];
+      totalIncome = 0 ;
+      updateList ();
+      updateTotal();
+      clearHide();
+   })
+}
+
+clearHide () ;
+
