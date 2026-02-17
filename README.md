@@ -8,6 +8,7 @@ A simple and interactive **Expense Tracker** built using **HTML, CSS, and JavaSc
 
 * ➕ Add income and expense transactions
 * ✏️ Edit existing entries
+* ✏️ Inline edit 
 * 🗑️ Delete income or expense items
 * 📊 Auto calculation of:
 
