@@ -5,6 +5,7 @@ A simple and interactive **Expense Tracker** built using **HTML, CSS, and JavaSc
 ---
 
 ## ✨ Features
+you can add the expense and filter it //
 
 * ➕ Add income and expense transactions
 * ✏️ Edit existing entries
